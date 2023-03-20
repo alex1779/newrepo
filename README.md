@@ -1,226 +1,101 @@
-<a name="readme-top"></a>
+# HTML & CSS3 & JavaScript Course
 
-<!-- TABLE OF CONTENTS -->
+If you are not familiar with linters, read [root level README](../README.md).
 
-# 📗 Table of Contents
+## Set-up GitHub Actions
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-  - [💻 Awesome books Presentation](#vgs-presentation)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+Please do the following **steps in this order**:
 
-<!-- PROJECT DESCRIPTION -->
+1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
+   - **Remember** to use the file linked above
+   - **Remember** that `.github` folder starts with a dot.
+2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
+   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
+3. When you open your first pull request you should see the result of the GitHub actions checks:
 
-# 📖 To Do list: list structure <a name="about-project"></a>
+![gh actions checks](../assets/images/gh-actions-html-css-checks.png)
 
-> In this project, I will build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.
+Click on the `Details` link of each action to see the full output and the errors that need to be fixed:
 
-## 🛠 Built With <a name="built-with"></a>
+![gh actions failing checks](../assets/images/gh-actions-html-css-failing-checks.png)
 
-### Tech Stack <a name="tech-stack"></a>
+## Set-up linters in your local env
 
-> This project uses the following stack :
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://www.w3schools.com/html/">HTML</a></li>
-    <li><a href="https://www.w3schools.com/css/">CSS</a></li>
-     <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
-> Here are some key features of the application :
-
-- **Structure list**
-*
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Here you can visit my live demo :
-
-- [N/A]()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 💻 Awesome books <a name="vgs-presentation"></a>
-
-> Here you can see my presentation :
-
-- [N/A]()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-> Clone the repository by clicking on the 'Code' button and copy the link
-
-To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need:
-
-npm i
-
-### Setup
-
-Clone this repository to your desired folder:
-
-Example commands:
-
-```sh
-  cd my-folder
-  git clone https://github.com/alex1779/To_do_list.git
-```
-
--
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
-
-### Usage
-
-To run the project, execute the following command:
-Open the index.html file in a web browser
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-Example command:
-
-To run the webhint linter
-
-```sh
-  npx hint .
-```
-
-To run the stylehint linter
-
-```sh
-  npx stylehint "**/*.{css,scss}"
-```
-
-To run the ESLint linter
-
-```sh
-  npx eslint .
-```
-
-### Deployment
-
-You can deploy this project using:
--Go to the main folder of the project and double-click on the index.html file.
-
-<!--
-Example:
-
-```sh
+**Note**: The `npm` package manager is going to create a `node_modules` directory to install all of your dependencies. You shouldn't commit that directory. To avoid that, you can create a [`.gitignore`](https://git-scm.com/docs/gitignore) file and add `node_modules` to it:
 
 ```
- -->
+# .gitignore
+node_modules/
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
-<!-- AUTHORS -->
+An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more.
 
-## 👥 Author <a name="author"></a>
+You can get the Lighthouse report by any of the following ways:
 
-👤 **Alejandro Maggioni**
+- [In Chrome DevTools](https://developers.google.com/web/tools/lighthouse#devtools)
+- [From the command line](https://developers.google.com/web/tools/lighthouse#cli)
+- [As a Node module](https://developers.google.com/web/tools/lighthouse#programmatic)
+- [From a web UI](https://developers.google.com/web/tools/lighthouse#psi)
 
-- GitHub: [@githubhandle](https://github.com/alex1779/)
-- Twitter: [@twitterhandle](https://twitter.com/alex1779)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alejandro-maggioni-086678b5/)
+To access the report generated by Lighthouse on your pull request, click the `Details` link for the `Linters/Lighthouse` check and you will see the full output of the action:
 
+![lighthouse report](../assets/images/lighthouse-report.png)
 
+### [Webhint](https://webhint.io/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors.
 
-<!-- FUTURE FEATURES -->
+**NOTE:** If you are running on Windows, you need to initialize npm to create `package.json` file. 
+   ```
+   npm init -y
+   ```
 
-## 🔭 Future Features <a name="future-features"></a>
+1. Run
+   ```
+   npm install --save-dev hint@7.x
+   ```
+   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
+2. Copy [.hintrc](.hintrc) to the root directory of your project.
+3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
+   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
+4. Run
+   ```
+   npx hint .
+   ```
+5. Fix validation errors.
 
-- Delete options
+### [Stylelint](https://stylelint.io/)
 
+A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. Run
 
-<!-- CONTRIBUTING -->
+   ```
+   npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+   ```
 
-## 🤝 Contributing <a name="contributing"></a>
+   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
 
-Contributions, issues, and feature requests are welcome!
+2. Copy [.stylelintrc.json](./.stylelintrc.json) to the root directory of your project.
+3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
+   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
+4. Run `npx stylelint "**/*.{css,scss}"` on the root of your directory of your project.
+5. Fix linter errors.
+6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Stylelint](https://stylelint.io/user-guide/usage/options) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
 
-Feel free to check the [issues page](../../issues/).
+### [ESLint](https://eslint.org/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. Run 
+   ```
+   npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+   ``` 
+   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
 
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
-If you like this project star it!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would like to thank the Microverse team.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [licensed](./LICENSE) .
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+2. Copy [.eslintrc.json](./.eslintrc.json) to the root directory of your project.
+3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
+    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
+4. Run `npx eslint .` on the root of your directory of your project.
+5. Fix linter errors.
+6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Eslint](https://eslint.org/docs/latest/user-guide/command-line-interface#fixing-problems) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!

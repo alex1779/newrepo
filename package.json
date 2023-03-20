@@ -1,0 +1,19 @@
+{
+  "name": "newrepo",
+  "version": "1.0.0",
+  "description": "If you are not familiar with linters, read [root level README](../README.md).",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex1779/newrepo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex1779/newrepo/issues"
+  },
+  "homepage": "https://github.com/alex1779/newrepo#readme"
+}
